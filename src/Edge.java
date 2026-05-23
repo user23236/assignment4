@@ -1,22 +1,28 @@
 public class Edge {
-    private Vertex source;
-    private Vertex destination;
+    private int source;
+    private int destination;
+    private int weight;
 
-    public Edge(Vertex source, Vertex destination) {
+
+    public Edge(int source, int destination) {
         this.source = source;
         this.destination = destination;
+        this.weight = 1;
     }
 
-    public Vertex getSource() {
-        return this.source;
+
+    public Edge(int source, int destination, int weight) {
+        this.source = source;
+        this.destination = destination;
+        this.weight = weight;
     }
 
-    public Vertex getDestination() {
-        return this.destination;
-    }
+    public int getSource() { return source; }
+    public int getDestination() { return destination; }
+    public int getWeight() { return weight; }
 
+    @Override
     public String toString() {
-        int var10000 = this.source.getId();
-        return var10000 + " -> " + this.destination.getId();
+        return "Edge{" + source + " -> " + destination + " (w:" + weight + ")}";
     }
 }
