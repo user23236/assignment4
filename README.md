@@ -168,16 +168,6 @@ O(V + E)
 
 ---
 
-# Observations
-
-- Execution time increased as graph size increased.
-- DFS was slightly faster in most tests.
-- Both algorithms demonstrated linear growth behavior consistent with O(V + E).
-- In simple linear graphs, BFS and DFS produced similar traversal orders.
-- In branching graphs, traversal order differences became more visible.
-
----
-
 # Screenshots
 
 ## Graph Output
