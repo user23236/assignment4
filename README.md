@@ -32,6 +32,33 @@ Example:
 ```
 
 ---
+How does graph size affect BFS and DFS performance?
+
+As graph size increases, traversal time also increases because more vertices and edges must be visited.
+
+Which traversal was faster?
+
+DFS was slightly faster in most experiments because it uses recursion and fewer queue operations.
+
+Do results match O(V + E)?
+
+Yes. Both algorithms visit each vertex and edge once, which matches the expected time complexity:
+
+O(V+E)
+
+How does graph structure affect traversal order?
+
+BFS explores level-by-level, while DFS explores deeply before backtracking. Different edge connections change traversal order.
+
+When is BFS preferred over DFS?
+
+BFS is preferred when finding the shortest path in unweighted graphs.
+
+What are limitations of DFS?
+
+DFS can go very deep and may cause stack overflow in very large graphs.
+
+---
 
 # Class Descriptions
 
@@ -162,6 +189,13 @@ O(V + E)
 ![img_2.png](img_2.png)
 ![img_3.png](img_3.png)
 ---
+
+## G. Bonus Task: Dijkstra's Algorithm
+*Implementation Details:*
+* *Edge Weights:* The Edge class was modified to include a weight field. An overloaded constructor was added to ensure backward compatibility with unweighted BFS/DFS tests (defaulting weight to 1).
+* *Graph Structure:* The Graph class was updated to support passing custom weights into the addEdge method.
+* *Algorithm Logic:* Implemented void dijkstra(int start) using HashMaps to track distances and visited nodes. As permitted by the guidelines, it uses an iterative loop (without a priority queue) to find the minimum distance unvisited node, relaxing adjacent edges step-by-step. Time complexity for this simple loop approach is O(V^2).
+* *Output:* The system strictly computes and cleanly prints the shortest distance from the source vertex to every other reachable vertex in the graph.
 
 # Reflection
 
